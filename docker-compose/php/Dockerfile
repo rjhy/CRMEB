@@ -8,7 +8,6 @@ RUN apt-get update; \
     php7.4-redis \
     php7.4-mysqli \
     php7.4-gd
-RUN apt-get clean \
-    apt-get autoremove\
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
+    RUN apt-get clean; \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*; \
     echo "open_basedir = /tmp:/var" > /etc/php/7.4/fpm/conf.d/open_basedir.ini
