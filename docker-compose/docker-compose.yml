@@ -18,9 +18,9 @@ services:
         # 固定子网ip，网段必须在子网络192.168.*.*
         ipv4_address: 192.168.10.11
     ports:
-      - 3306:3306
+      - 3336:3306
     volumes:
-      - ./mysql/my.cnf:/etc/mysql/my.cnf
+      - ./mysql/conf:/etc/mysql/conf.d
       - ./mysql/data:/var/lib/mysql #挂载数据目录到本地
       - ./mysql/log:/var/log/mysql
     command:
