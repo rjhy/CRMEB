@@ -52,7 +52,7 @@ services:
   phpfpm:
     container_name: crmeb_php #指定容器名
     # image: phpfpm-image #指定镜像名
-    image: crmeb_php #指定镜像名
+    # image: crmeb_php #指定镜像名
     build:
       context: ./php #dockerfile文件路径
       dockerfile: Dockerfile #制定dockerfile文件名称
@@ -72,7 +72,7 @@ services:
     networks:
       app_net:
         ipv4_address: 192.168.10.90
-#    command: /bin/bash -c "php -v"
+  # command: /bin/bash -c "php -v"
   # nginx 容器
   nginx:
     container_name: crmeb_nginx
